@@ -1,0 +1,27 @@
+{
+  "name": "sai-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albuquerque02/SAI-BACK.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Albuquerque02/SAI-BACK/issues"
+  },
+  "homepage": "https://github.com/Albuquerque02/SAI-BACK#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mssql": "^9.1.1"
+  }
+}

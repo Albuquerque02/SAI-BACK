@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Albuquerque02/SAI-BACK#readme",
   "dependencies": {
+    "axios": "^1.3.5",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mssql": "^9.1.1"

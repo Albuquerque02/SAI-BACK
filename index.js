@@ -16,6 +16,9 @@ const config = {
     },
 };
 
+
+
+
 sql
   .connect(config)
   .then(console.log("Conectado ao banco sai"))

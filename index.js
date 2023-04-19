@@ -24,7 +24,7 @@ sql
 
 
   // => COMPONENTES
-  app.post("/createComponente", upload.array("foto"), (req, res) => {
+  app.post("/createComponente", (req, res) => {
     const {teste} = req.body
     const {} = req.body
     const {} = req.body
@@ -45,7 +45,7 @@ sql
 
   })
 
-  app.get("/getComponente", upload.array("foto"), (req, res) => {
+  app.get("/getComponente", (req, res) => {
 
     let SQL = "SELECT * FROM tb_Componentes by cd_Componente asc"
 

@@ -60,6 +60,11 @@ sql
 
   let SQL = `DELETE from tb_Componentes WHERE cd_PN = ${PN}`
 
+  sql.query(SQL, (err, result) => {
+    if (err) console.log(err);
+    else res.send(result);
+  });
+
   })
 
 

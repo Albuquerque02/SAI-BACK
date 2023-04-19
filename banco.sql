@@ -1,4 +1,7 @@
-Use [SAI2023]
+CREATE DATABASE sai
+Go
+
+Use sai
 Go
 
 If Not Exists(Select * From SysObjects Where Name = 'tb_Grupo')

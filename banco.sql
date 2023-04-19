@@ -1,7 +1,4 @@
-CREATE DATABASE sai
-Go
-
-Use [sai]
+Use [SAI2023]
 Go
 
 If Not Exists(Select * From SysObjects Where Name = 'tb_Grupo')
@@ -84,8 +81,8 @@ Go
 If Not Exists(Select * From SysObjects Where Name = 'tb_Componentes')
 	Begin
 		Create Table tb_Componentes(
-			 cd_Componente	    Int				 Not Null
-			,cd_PN				Int				 Not Null
+			 cd_Componente	    Int	IDENTITY(1,1)Not Null
+			,cd_PN				Varchar(20)		 Not Null
 			,ds_Nome		    Varchar(200)	 Not Null
 			,ds_Modelo		    Varchar(100)	 Not Null
 			,ds_Fabricante	    Varchar(100)	 Not Null
@@ -115,5 +112,20 @@ If Not Exists(Select * From SysObjects Where Name = 'tb_Input')
 
 			,Constraint [FK_tb_Etapas_tb_Input] Foreign Key	(cd_Etapa, cd_Cliente, cd_Projeto)
 				References tb_Etapas (cd_Etapa, cd_Cliente, cd_Projeto))
+	End
+Go
+
+If Not Exists(Select ID From SysObjects Where Name = 'tb_Fornecedor')
+	Begin
+		Create Table tb_Fornecedor(
+			cd_Fornecedor				Int				Not Null
+		   ,ds_Nome						Varchar(200)	Not Null
+		   ,ds_ClassificacaoFornec		Varchar(70)		Not Null
+		   ,ds_Email					Varchar(100)	Not Null
+		   ,ds_Contato					Varchar(11)		Not Null
+
+		   ,Constraint [PK_tb_Fornecedor] Primary Key Clustered
+		   (cd_Fornecedor Asc)
+		)
 	End
 Go

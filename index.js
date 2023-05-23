@@ -1,5 +1,7 @@
 const express = require('express');
+var cors=require('cors')
 const app = express();
+app.use(cors())
 const port = 3001
 const multer = require("multer");
 const path = require("path");
